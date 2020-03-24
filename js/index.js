@@ -16,10 +16,19 @@ $(document).ready(function(){
 	
 	// Set global date value and API-keys
 	var dToday 		= new Date();
-	sClientID 		= '27d273b3d47f43a9ab51cda9ac1eea50';
-	sSongKickAPIKey = 'gE5WDRAXXQaBr1xG';
-	sMapBoxAPIKey	= 'pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g&cachebuster=1581450881622';
-	
+
+	// Insert your Spotify API Key here:
+	sSpotifyAPIKey 	= '';
+
+	// Insert your SongKick API Key here:
+	sSongKickAPIKey = '';
+
+	// Insert your MapBox API Key here:
+	sMapBoxAPIKey	= '';
+
+	// Insert your Google Static Maps API Key here:
+	sGoogleMapsAPI	= '';
+
 	// Init
 	iDefaultPriceMin	= 0;
 	iDefaultPriceMax	= 100;
@@ -41,6 +50,7 @@ $(document).ready(function(){
 	oMapZoomSettings[45] 	= 8;
 	oMapZoomSettings[50] 	= 8;
 
+	// Set up the radii for the search panel
 	aRadius					= [10,25,50,100];
 
 	// Set up the music facts array
@@ -364,7 +374,7 @@ $(document).ready(function(){
 
             sHTML = sHTML + '			    <div class="row">';
             sHTML = sHTML + '			        <div class="' + sWidthCol1 + '">';
-            sHTML = sHTML + '		                 <img class="card-img-top" id="venuelocationmap" src="https://maps.googleapis.com/maps/api/staticmap?center=' + oVenue.lat + ',' + oVenue.lng + '&zoom=15&size=400x400&maptype=roadmap&key=AIzaSyAdXdGsTBen3jImU9XsSkc-LXRgE6FhzUo" alt="">';
+            sHTML = sHTML + '		                 <img class="card-img-top" id="venuelocationmap" src="https://maps.googleapis.com/maps/api/staticmap?center=' + oVenue.lat + ',' + oVenue.lng + '&zoom=15&size=400x400&maptype=roadmap&key=' + sGoogleMapsAPI + '" alt="">';
             sHTML = sHTML + '			        </div>';
             sHTML = sHTML + '			        <div class="' + sWidthCol2 + ' text-left">';
             sHTML = sHTML + '			            <p>';
@@ -540,7 +550,7 @@ $(document).ready(function(){
 	function redirectToSpotifyForAuthentication(){
 		// Comments
 		var	sURL = 'https://accounts.spotify.com/authorize?';
-		sURL = sURL + '&client_id=' + sClientID;
+		sURL = sURL + '&client_id=' + sSpotifyAPIKey;
 		sURL = sURL + '&redirect_uri=https://www.scoaring.com/dscs/spotifyAuthRedirect.html';
 		// sURL = sURL + '&scope=user-top-read%20user-read-private%20user-read-email';
         sURL = sURL + '&scope=user-top-read';
@@ -810,7 +820,7 @@ $(document).ready(function(){
 		var sHTML = '';
 		sHTML = sHTML + '<div class="card">';
 		sHTML = sHTML + '	<ul class="list-group list-group-flush">';
-		sHTML = sHTML + '		<img class="card-img-top" id="locationmap" src="https://maps.googleapis.com/maps/api/staticmap?center=' + fLat + ',' + fLng + '&zoom=11&size=400x400&maptype=roadmap&key=AIzaSyAdXdGsTBen3jImU9XsSkc-LXRgE6FhzUo" alt="">';
+		sHTML = sHTML + '		<img class="card-img-top" id="locationmap" src="https://maps.googleapis.com/maps/api/staticmap?center=' + fLat + ',' + fLng + '&zoom=11&size=400x400&maptype=roadmap&key=' + sGoogleMapsAPI + '" alt="">';
 		sHTML = sHTML + '		<li class="list-group-item">';
 		sHTML = sHTML + '			<div class="row">';
 // 		sHTML = sHTML + '				<div class="col-xl-12 pl-2 text-muted center locationsearchviewtext mb-2 text-nonselectable"><small>Look for concerts within <span class="radiusslidercurrent bold">' + iLocationRadius + ' km</span> of:</small></div>';
@@ -1062,7 +1072,7 @@ $(document).ready(function(){
 		var iZoom	= oMapZoomSettings[oPanelSearchSettings.iLocationRadius];
 		
 		// Comments
-		var sMapURL		= 'https://maps.googleapis.com/maps/api/staticmap?center=' + fLat + ',' + fLng + '&zoom=13&size=400x250&maptype=roadmap&key=AIzaSyAdXdGsTBen3jImU9XsSkc-LXRgE6FhzUo';
+		var sMapURL		= 'https://maps.googleapis.com/maps/api/staticmap?center=' + fLat + ',' + fLng + '&zoom=13&size=400x250&maptype=roadmap&key=' + sGoogleMapsAPI;
 		
 		// Comments
 		$('#locationmap').attr('src', sMapURL);
@@ -1077,8 +1087,6 @@ $(document).ready(function(){
 		var sLocationName	= oPanelSearchSettings.sLocationName;
 		
 		renderSearchLocationMap();
-		// var sMapURL		= 'https://maps.googleapis.com/maps/api/staticmap?center=' + fLat + ',' + fLng + '&zoom=11&size=400x150&maptype=roadmap&key=AIzaSyAdXdGsTBen3jImU9XsSkc-LXRgE6FhzUo';
-		// $('#locationmap').attr('src', sMapURL);
 		$('#searchpanellocationname').html(sLocationName);
 		
 		$('#locationsearchdisplay').removeClass('hidden');
