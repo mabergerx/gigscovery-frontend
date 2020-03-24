@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GIGSCOVERY</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/dscs.css" rel="stylesheet">
+	<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+	<link href="css/jquery.json-viewer.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal-video.min.css">
+    <script src="https://kit.fontawesome.com/c80dff83b6.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />    
+    <link rel="stylesheet" href="css/spinner.css">
+</head>
+    <body>
+
+    <div id="spinner-front" class="">
+        <i class="fas fa-spinner fa-pulse fa-10x mb-3"></i>
+        <p style="font-size:2.4em;">Please wait while we prepare your concert recommendations...</p>
+        <p style="font-size:1.5em; font-style: italic;" class="mb-0">&ldquo;<span id="musicfact"></span>&rdquo;</p>
+        <p style="font-size:1.0em;" class="mt-0">Source: <a href="https://bestlifeonline.com/music-facts/" class="text-white" target="_blank">https://bestlifeonline.com/music-facts/</a></p>
+        
+        <p style="font-size:1.5em;" class="excuse" id="excuse01">It looks like it is taking a little longer than expected...</p>
+        <p style="font-size:1.5em;" class="excuse" id="excuse02">No worries, we'll get there...</p>
+        <p style="font-size:1.5em;" class="excuse" id="excuse03">Hmmm... This is really taking very long, sorry about that...</p>
+        <p style="font-size:1.5em;" class="excuse" id="excuse04">Still there? Thanks! </p>
+        <p style="font-size:1.5em;" class="excuse" id="excuse05">It look like things got out of hand somehow. If you want to cancel and try again, please click 'Cancel'.<br><a href="index.html" class="btn btn-warning btn-lg mt-3">Cancel</a></p>
+    </div>
+    <div id="spinner-back"></div>
+
+    <!-- Page Content -->
+    <div class="container mb-5 mt-2" id="page">
+        <div class="row mt-3"
+            <!-- Page-2-page nav -->
+            <div class="col-md-2 col-lg-2 col-xl-2">
+                <div id="headunit" class="sticky"></div>
+                <div id="test01" class="btn btn-secondary btn-block hidden"><i class="fas fa-plug"></i> Check</div>
+            </div>
+            
+            <!-- Suggestions list -->
+            <div class="col-lg-10 col-xl-10 nonauthorized">
+                <div class="container">
+                    <h3>GIGSCOVERY</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">Home</li>
+                        </ol>
+                    </nav>            
+    
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card" style="height:20rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-center"><i class="fab fa-spotify fa-5x"></i></h5>
+                                    <h3>Spotify</h3>
+                                    <p class="card-text text-center">Use your Spotify history to find concerts you might like to go to. Sign in to Spotify to get going.</p>
+                                    <div class="btn btn-secondary signintospotify pointer">Sign in to Spotify</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card" style="height:20rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-center"><i class="fas fa-key fa-5x"></i></h5>
+                                    <h3>Privacy by design</h3>
+                                    <p class="card-text text-center">We don't need your personal information. We don't want your personal information.</p>    
+                                    <a href="privacy.html" class="btn btn-secondary pointer">Read about it</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card" style="height:20rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-center"><i class="fab fa-youtube fa-5x"></i></h5>
+                                    <h3>Watch the movie</h3>
+                                    <p class="card-text text-center">Want to know how it works? Watch the movie.<br><br></p>
+                                    <div class="btn btn-secondary js-video-button pointer" data-video-id='dQw4w9WgXcQ'>Watch the movie!</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="col-lg-7 col-xl-7 hidden authorized">
+                <div id="results" class="">
+                    <div class="authorized" id="middle">
+                        
+                        <div class="jumbotron pt-3 pb-3 img-fluid" style="background-color:#fff;">
+                            <div class="container text-center">
+                                <h1 class="display-4">GIGSCOVERY</h1>
+                                <p class="lead">Thank you for using GIGSCOVERY. GIGSCOVERY recommends concerts based on what you listen to on Spotify.</p>
+                                <p class="text-center" style="width:100%;"><div class="btn btn-info btn-lg mt-3 mb-2 pointer getrecommendationbutton" id="">Get your recommendations</div></p>
+
+                                <h4 class="text-center mt-5">We stand on the shoulders of giants</h4>
+                                <p class="text-center">We bring together data from <a href="https://developer.spotify.com/documentation/web-api/" target="_blank">Spotify</a>, <a href="https://www.artists.bandsintown.com/support/api-installation" target="_blank">Bands in Town</a>, <a href="https://docs.mapbox.com/api/" target="_blank">MapBox</a>, <a href="https://developers.google.com/maps/documentation/maps-static/intro" target="_blank">Google Maps</a> and <a href="https://www.songkick.com/developer" target="_blank">SongKick</a> to bring you customized concert recommendations.</p>
+                                <div class="btn btn-outline-info mx-auto pointer" id="revealservices">Learn how we use these services</div>
+                                <div class="btn btn-outline-info mx-auto pointer hidden" id="hideservices">Ok, I know enough about the services you use.</div>
+                            </div>
+                        </div>                    
+                        
+                        <!-- -->
+                        <div class="card-columns hidden" id="services">
+                            <div class="card">
+                                <img class="card-img-top" src="images/services/spotify.png">
+                                <div class="card-body">
+                                    <h4 class="card-title">Spotify</h4>
+                                    <p class="card-text">We use Spotify to learn about your music preferences.</p>
+                                </div>
+                                <div class="card-footer"><a href="https://developer.spotify.com/documentation/web-api/" target="_blank" class="btn btn-outline-secondary btn-block btn-sm">Spotify API</a></div>                            
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="images/services/googlemaps.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">Google Maps</h4>
+                                    <p class="card-text">We use Google Maps to present you with a map of the city in which you would like to go to concerts.</p>
+                                </div>
+                                <div class="card-footer"><a href="https://developers.google.com/maps/documentation/maps-static/intro" target="_blank" class="btn btn-outline-secondary btn-block btn-sm">Google Maps API</a></div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top border-bottom" src="images/services/bandsintown.png">
+                                <div class="card-body">
+                                    <h4 class="card-title">Bands in Town</h4>
+                                    <p class="card-text">We use Bands in Town to retrieve the concerts dates based on our recommendation system.</p>
+                                </div>
+                                <div class="card-footer"><a href="https://www.artists.bandsintown.com/support/api-installation" target="_blank" class="btn btn-outline-secondary btn-block btn-sm">Bands in Town API</a></div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top border-bottom" src="images/services/mapbox_logo.png">
+                                <div class="card-body">
+                                    <h4 class="card-title">MapBox</h4>
+                                    <p class="card-text">We use MapBox in our search panel to let you search for cities.</p>
+                                </div>
+                                <div class="card-footer"><a href="https://docs.mapbox.com/api/" target="_blank" class="btn btn-outline-secondary btn-block btn-sm">MapBox API</a></div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top border-bottom" src="images/services/Songkick.jpg">
+                                <div class="card-body">
+                                    <h4 class="card-title">SongKick</h4>
+                                    <p class="card-text">We use SongKick to provide you with information about the venues that offer your recommended concerts.</p>
+                                </div>
+                                <div class="card-footer"><a href="https://www.songkick.com/developer" target="_blank" class="btn btn-outline-secondary btn-block btn-sm">SongKick API</a></div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Panel -->
+            <div class="col-lg-3 col-xl-3">
+                <div id="searchpanel" class="authorized sticky"></div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="//www.scoaring.com/dscs/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <!-- <script src="js/bootstrap-slider-master/src/js/bootstrap-slider.js"></script> -->
+        <script src="js/dateFormat.js" type="text/javascript"></script>
+        <script src="js/jquery-dateformat.min.js" type="text/javascript"></script>
+        <script src="js/jquery-modal-video.min.js" type="text/javascript"></script>
+        <script src="js/gijgo.min.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>DSCS</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/dscs.css" rel="stylesheet">
+	<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+	<link href="css/jquery.json-viewer.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal-video.min.css">
+	<script src="https://kit.fontawesome.com/c80dff83b6.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url('images/concert/'); background-size: 100%;height: 100%;">
+
+<!-- Page Content -->
+<div class="container mb-5 mt-2" id="page">
+	<div class="row mt-3">
+		<!-- Page-2-page nav -->
+		<div class="col-md-2 col-lg-2 col-xl-2">
+			<div id="headunit" class="sticky"></div>
+		</div>
+		
+		<!-- Suggestions list -->
+		<div class="col-lg-10 col-xl-10 nonauthorized">
+            <h3>GIGSCOVERY Privacy statement</h3>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Privacy statement</li>
+				</ol>
+			</nav>            
+			<p>
+				<ul style="font-style: italic;">
+					<li class="pb-1">What happens to my data after logging in to the Gigscovery service with my Spotify account?</li>
+					<li class="pb-1">Is my data stored on your servers?</li>
+					<li class="pb-1">Do you have access to my Spotify password?</li>
+				</ul>
+			</p>
+			<p>To answer these and many more questions that you might have when it comes to your personal data, we offer you full insight into our data flows and wrote the following piece for clarification on our privacy mechanisms.</p>
+			<p>To take users' privacy into account from beginning to end of the service development process and provide privacy-friendly technology services to end-users, the concept privacy by design (PbD) was developed (<a href="#Schaar2010">3</a>, <a href="#Lentzsch2017">4</a>). PbD was introduced by privacy expert Ann Cavoukian in 2009, who first pointed out the importance of managing user data in a privacy-centered way, especially in our age and time, full of ubiquitous technology, complex services and rapid knowledge creation (<a href="#Cavoukian2009">1</a>).</p>
+			<p>Cavoukian developed fundamental principles to guide design-thinking  during the development of new technologies in terms of awareness  and freedom of decision making around personal data. These principles were created to help organizations and developers like us to incorporate privacy by default  and stimulate the pro-active implementation and prioritization of user privacy on a global scale and also form an integral part of the General Data Privacy Regulation (GDPR) (<a href="#Cavoukian2009">1</a>, <a href="#Cavoukian2020">2</a>, <a href="#Danezis2015">5</a>). To ensure a successful privacy design, we want to communicate our commitment to data privacy with you, our user community and actively share our improvements over time. We start doing this by discussing the following points in more details:</p>
+			<ul>
+				<li>Data Security</li>
+				<li>Privacy by Default</li>
+				<li>Transparent Data Flows</li>
+				<li>Respecting User Privacy</li>
+			</ul>
+			<h3>We make sure that your data is secure</h3>
+			<p>Security and privacy go hand in hand as the personal data protection is dependent on the security measures in place. The data life cycle and its security protocols have to be documented at every stage in the process to promote the data confidentiality and integrity throughout the development and maintenance phases of the service (<a href="#Cavoukian2009">1</a>). Another security aspect is to anticipate technological developments into the security protocol by e.g. encrypting all transmission channels and separating the data that is offered by an external API such as Spotify from the internal database (<a href="#Schaar2010">3</a>).</p>
+			<p>To make sure that your data won’t be read or accessed by other third-party providers, we use the Spotify OAuth 2.0 authentication and thus are not able to access your log-in credentials. This means that the log-in credentials will always stay on the Spotify servers. Furthermore, through the HTTPS encryption we can thus ensure that all of the data that you enter on our website will stay encrypted such as “City: Berlin” and cannot be decrypted by third-parties.</p>
+			<p>The only personal data that is currently visible in the Endpoint-URL is your Spotify token, however, this is only visible in the request URL within your browser during your session. While the token is also used in API calls to our server for the duration of the session, we can only use it to access your top artists and tracks, we are not able to access or change any settings in your account. The token that you generated by logging in with your Spotify account expires after one hour and is thus not valid anymore after this period of time has passed. 
+			<h3>We designed our service according to privacy by default</h3>
+			<p>To ensure privacy by default, Fair Information Practices (FIPs) such as the purpose specification, collection limitation, data minimization  and use limitation  are suggested to ensure transparent use of data, avoid unnecessary data collection, increase data anonymity and encourage the destruction of personal data after its use has been fulfilled, respectively (<a href="#Cavoukian2009">1</a>).</p>
+			<p>We minimize the storage and usage of your data by providing a session-based service that eliminates the user data every time a user closes the session. This means that we do not keep any Spotify-related data on our servers. Apart from limiting the use and collection of your data while still having a fully functional personalized concert recommendation service, we also specify the purpose of using your Spotify data in the data flow below.</p>
+			<h3>Look into our data flows</h3>
+			<p class="pb-0">How do I know where my data is stored throughout the Gigscovery user journey? User privacy is related to the trust that you as a community have in our service. This trust is based on the accountability that we take for our service and we communicate this through the visibility and transparency of our data flow to foster trustful, open and compliant privacy mechanisms (<a href="#Cavoukian2009">1</a>).  
+			<p><img src="images/SystemArchitecturev1.1.png" class="img-fluid py-0"></p>
+			<h3>We respect your privacy</h3>
+			<p>The final principle addresses the respect for user data and highlights the importance of user-freedom in regards to user settings. To ensure the management of privacy settings by users, an accurate, accessible and compliant representation of personal data in the service is required. Service companies require their users to sign a data consent form, which should be transparent enough to help users understand which data they are agreeing to share with the company (<a href="#Cavoukian2009">1</a>). This can be implemented through initial privacy functions during the development of services.</p>
+			<p>We thus ensure full transparency and privacy to you, our users, through the removal of your data from our servers with the end of every session, by default.</p>  
+			<p>With this privacy statement, we hope to inform you about our privacy by design model and are proud to present our Gigscovery service to you. We advise you to always consult the latest version of our privacy by design statement.</p> 
+			<!-- <p>Date of last edit: 20-03-2020</p> -->
+			<h3>Footnotes</h3>
+			<p>
+				<ol>
+					<li class="mb-2"><a name="Cavoukian2009"></a><strong><a href="http://dataprotection.industries/wp-content/uploads/2017/10/privacy-by-design.pdf" target="_blank">Privacy by design: The 7 foundational principles</a></strong><br>Cavoukian, A., 2009 | Information and Privacy Commissioner of Ontario, Canada, 5.</li>
+					<li class="mb-2"><a name="Cavoukian2020"></a><strong><a href="https://doi.org/10.1109/MCE.2019.2953739" target="_blank">Understanding How to Implement Privacy by Design, One Step at a Time</a></strong><br>Cavoukian, A., 2020 | IEEE Consumer Electronics Magazine , 9, 78–82.</li>
+					<li class="mb-2"><a name="Schaar2010"></a><strong><a href="https://link.springer.com/article/10.1007/s12394-010-0055-x" target="_blank">Privacy by Design</a></strong><br>Schaar, P., 2010 | Identity in the Information Society , 3 (2), 267–274.</li>
+					<li class="mb-2"><a name="Lentzsch2017"></a><strong><a href="https://www.researchgate.net/publication/315066448_Integrating_a_Practice_Perspective_to_Privacy_by_Design" target="_blank">Integrating a Practice Perspective to Privacy by Design</a></strong><br>Lentzsch, C., Loser, K.-U., Degeling, M., & Nolte, A. ,2017 | BT - Human Aspects of Information Security, Privacy and Trust. In T. Tryfonas (Ed.) (pp. 691–702). Cham: Springer International Publishing.</li>
+					<li class="mb-2"><a name="Danezis2015"></a><strong><a href="https://doi.org/10.2824/38623" target="_blank">Privacy and Data Protection by Design - from policy to engineering</a></strong><br>Danezis, G., Domingo-Ferrer, J., Hansen, M., Hoepman, J.-H., Metayer, D. Le, Tirtea, R., & Schiffner, S., 2015</li>
+				</ol>
+			</p>
+		</div>
+	</div>
+</div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="//www.scoaring.com/dscs/vendor/jquery/jquery.min.js"></script>
+	
+  <script src="js/index.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
+  <script src="js/dateFormat.js"></script>
+  <script src="js/jquery.json-editor.min.js"></script>
+  <script src="js/jquery-dateformat.min.js"></script>
+  <script src="js/jquery-modal-video.min.js"></script>
+</body>
+
+</html>
