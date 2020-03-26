@@ -16,17 +16,9 @@ $(document).ready(function(){
 	
 	// Set global date value and API-keys
 	var dToday 		= new Date();
-
-	// Insert your Spotify API Key here:
 	sSpotifyAPIKey 	= '';
-
-	// Insert your SongKick API Key here:
 	sSongKickAPIKey = '';
-
-	// Insert your MapBox API Key here:
 	sMapBoxAPIKey	= '';
-
-	// Insert your Google Static Maps API Key here:
 	sGoogleMapsAPI	= '';
 
 	// Init
@@ -50,7 +42,6 @@ $(document).ready(function(){
 	oMapZoomSettings[45] 	= 8;
 	oMapZoomSettings[50] 	= 8;
 
-	// Set up the radii for the search panel
 	aRadius					= [10,25,50,100];
 
 	// Set up the music facts array
@@ -312,7 +303,7 @@ $(document).ready(function(){
         sHTML = sHTML + '			</div>';
 
         sHTML = sHTML + '			<div class="modal-body text-left" id="modalprivacyconsentformbody">';
-        // sHTML = sHTML + '			<p>If you want to use Gigscovery, you agree to share the following data for the duration of this session:</p>';
+        // sHTML = sHTML + '			<p>If you want to use gigscovery, you agree to share the following data for the duration of this session:</p>';
         sHTML = sHTML + '			    <p>Our service needs access to some of your personal information in Spotify to give you personalized concert recommendations. <strong>None</strong> of your personal information is stored on our servers.</p>';
         sHTML = sHTML + '			    <p>If you are comfortable with giving us access to your personal information, we would like you to log in to Spotify and grant us access to the following of your personal information in Spotify:</p>';
         
@@ -323,7 +314,7 @@ $(document).ready(function(){
         sHTML = sHTML + '			    </ul>';     
         sHTML = sHTML + '			    </div>';     
         
-        // sHTML = sHTML + '			<p>If you log out of Gigscovery, all of your Spotify-related data will be removed immediately from our database.</p>';
+        // sHTML = sHTML + '			<p>If you log out of gigscovery, all of your Spotify-related data will be removed immediately from our database.</p>';
         sHTML = sHTML + '			    <p>Are you sure you would like to use our service?</p>';
         
         sHTML = sHTML + '			</div>';
@@ -492,7 +483,7 @@ $(document).ready(function(){
 		sHTML = sHTML + '	<div class="modal-dialog modal-dialog-centered" role="document">';
 		sHTML = sHTML + '		<div class="modal-content">';
 		sHTML = sHTML + '			<div class="modal-header text-center pbx" id="modalsignoutheader">';
-		sHTML = sHTML + '				<h4>GIGSCOVERY</h4>';
+		sHTML = sHTML + '				<h4>gigscovery</h4>';
 		sHTML = sHTML + '			</div>';
 		sHTML = sHTML + '			<div class="modal-body" id="modalsignoutbody">Are you sure you want to sign out?</div>';
 		
@@ -641,7 +632,7 @@ $(document).ready(function(){
 		sHTML = sHTML + '	<img class="card-img-top" src="/dscs/images/logo.png" alt="">';
 		// sHTML = sHTML + '     <div class="card-header bg-secondary text-white text-center pt-3 pb-2 gohome pointer">';
 		// sHTML = sHTML + '         <i class="fas fa-share-alt fa-5x"></i>';
-		// sHTML = sHTML + '         <h5 class="text-nonselectable"><strong>Gigscovery</strong></h5>';
+		// sHTML = sHTML + '         <h5 class="text-nonselectable"><strong>gigscovery</strong></h5>';
 		// sHTML = sHTML + '     </div>';
 		sHTML = sHTML + '     <div class="card-body pt-2 pb-2">';
 		sHTML = sHTML + '         <p class="card-text text-center mt-0 text-nonselectable">The Spotify powered concert discovery service</p>';
@@ -838,7 +829,7 @@ $(document).ready(function(){
 		sHTML = sHTML + '			<div id="locationsearchform" class="hidden">';
 		sHTML = sHTML + '				<div class="row">';
 		sHTML = sHTML + '					<div class="col-xl-9">';
-		sHTML = sHTML + '						<input type="text" class="form-control mb-3 text-nonselectable" id="locationsearch" style="font-size:0.8em;" placeholder="Type your location here...">';
+		sHTML = sHTML + '						<input type="text" class="form-control mb-3" id="locationsearch" style="font-size:0.8em;" placeholder="Type your location here...">';
 		sHTML = sHTML + '					</div>';
 		sHTML = sHTML + '					<div class="col-xl-3">';
 		sHTML = sHTML + '						<div class="btn btn-sm btn-info pointer float-right" id="cancellocationsearch">Cancel</div>';
